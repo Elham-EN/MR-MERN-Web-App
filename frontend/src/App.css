@@ -11,3 +11,11 @@
   letter-spacing: 1px;
   font-size: 1.8em;
 }
+
+.form-box {
+  /* background-color: rgb(234, 234, 234); */
+  border: 1px solid rgb(229, 226, 226);
+  border-radius: 10px;
+  padding: 100px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}

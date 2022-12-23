@@ -2,7 +2,7 @@ import axios from "axios";
 
 const urlMovies = "http://localhost:5000/api/v1/movies";
 
-export default class MovieDataSerivce {
+class MovieDataSerivce {
   //Return all the movies for a particular page (default page request is 0)
   getAllMovies(page = 0) {
     return axios.get(`${urlMovies}?page=${page}`);
@@ -20,15 +20,15 @@ export default class MovieDataSerivce {
   }
 
   createReview(data) {
-    return axios.post(`${urlMovies}/review`, data);
+    return axios.post(`${urlMovies}/reviews`, data);
   }
 
   updateReview(data) {
-    return axios.put(`${urlMovies}/review`, data);
+    return axios.put(`${urlMovies}/reviews`, data);
   }
 
   deleteReview(id, userId) {
-    return axios.delete(`${urlMovies}/review`, {
+    return axios.delete(`${urlMovies}/reviews`, {
       data: { review_id: id, user_id: userId },
     });
   }
@@ -37,3 +37,5 @@ export default class MovieDataSerivce {
     return axios.get(`${urlMovies}/ratings`);
   }
 }
+
+export default new MovieDataSerivce();

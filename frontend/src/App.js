@@ -32,7 +32,7 @@ function App() {
             <Navbar.Collapse id="navbarScroll">
               <Nav className="mr-auto">
                 <Nav.Link>
-                  <Link className="font" to={"/movies"}>
+                  <Link className="font" to={"/"}>
                     Movies
                   </Link>
                 </Nav.Link>
@@ -52,7 +52,7 @@ function App() {
           </Container>
         </Navbar>
         <Routes>
-          <Route path={"/movies"} element={<MoviesList />} />
+          <Route path={"/"} element={<MoviesList />} />
           <Route path="movies/:id/review" element={<AddReview user={user} />} />
           <Route path="movies/:id/" element={<Movie user={user} />} />
           <Route path="/login" element={<Login login={login} />} />
